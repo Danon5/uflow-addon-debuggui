@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace UFlow.Addon.DebugGUI.Core.Runtime
 {
-    public class GUIDebugModule : BaseBehaviourModule
+    public class GUIDebugModule : BaseBehaviourModule<GUIDebugModule>
     {
         internal static GUIStyle defaultStyle;
 
@@ -35,7 +35,7 @@ namespace UFlow.Addon.DebugGUI.Core.Runtime
             }
         }
 
-        public override void Unload()
+        public override void UnloadDirect()
         {
             defaultStyle = null;
         }
